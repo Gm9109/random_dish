@@ -7,33 +7,69 @@ body {
   width: 100%;
   font-family: Montserrat, sans-serif;
   background: radial-gradient(rgb(255, 254, 176), rgb(255, 236, 129));
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  /* justify-content: center; */
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  display: flex;
+  justify-content: space-evenly;
+  /* grid-template-columns: repeat(2, minmax(200px, 1fr));
   grid-template-rows: repeat(2, minmax(40px, 1fr));
   grid-auto-flow: row;
-  grid-auto-columns: auto;
+  grid-auto-columns: auto; */
+  border: ridge 20px black;
+  background: radial-gradient(rgb(34, 34, 34), rgb(0, 0, 0));
+  text-shadow: yellow 1px 1px 5px;
+}
+
+.grid2 {
+  border: ridge 10px rgb(147, 49, 65);
+}
+
+.picAndIngredients {
+  display: flex;
+  flex-direction: row;
+}
+
+.split {
+  border: ridge 10px black;
+}
+
+.videoPlayer{
+  /* width: 50%; */
+  /* background-color: red; */
+  background: radial-gradient(rgb(124, 34, 34),rgb(237, 9, 9) );
+  padding: 50px;
+  border: outset 10px black;
+  /* justify-content: center; */
 }
 
 #title {
   text-align: center;
   font-size: 2.5rem;
-  border-top: solid 10px;
-  border-left: ridge 20px black;
+  /* border-top: solid 10px; */
 }
 
 #name {
-  border-top: solid 10px;
-  border-right: ridge 20px black;
+  /* border-top: solid 10px; */
+  /* border-right: ridge 20px black; */
   text-align: center;
 }
 
 #nation {
   text-align: center;
   font-size: 1.2rem;
-  border-left: ridge 20px black;
+  /* border-left: ridge 20px black; */
+}
+
+#ingredients {
+  width: 100%;
+  border: ridge 10px rgb(147, 49, 65);
+  font-size: 2.5rem;
+  background: linear-gradient(to left, rgb(179, 42, 42), red);
 }
 
 #instructions {
@@ -44,26 +80,45 @@ body {
   text-align: center;
 }
 
+p {
+  font-size: 15px;
+}
+
 a {
   text-decoration: none;
-  color: black;
-  font-size: 2rem;
+  color: rgb(211, 56, 56);
+  background: rgb(211, 56, 56);
+  font-size: 1.5rem;
+  /* align-items: baseline; */
   border-right: ridge 20px black;
+  border-left: ridge 15px black;
+  border-top: ridge 15px black;
   text-align: center;
-  transition-duration: 3s;
+  transition-duration: 1.5s;
   transition-property: background, color;
 }
 
+.videoPlayer {
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  width: 50%;
+}
+
 a:hover {
-  background: radial-gradient(black, rgb(128, 31, 31));
+  /* background: radial-gradient(black, rgb(128, 31, 31)); */
+  /* background: wheat; */
   color: white;
+  font-weight: bold;
 }
 
 img {
   border: ridge 10px rgb(147, 49, 65);
   border-right: none;
   object-fit: cover;
-  width: 100%;
+  width: 50%;
 }
 
 .btnSpot {
@@ -90,7 +145,7 @@ img {
   display: block;
   font-family: "Lucida Grande", Arial, sans-serif;
   font-size: 3rem;
-
+  
   font-weight: bold;
   height: 10rem;
   width: 100rem;
@@ -108,8 +163,8 @@ img {
   background-color: #0d1142;
   top: 4px;
   box-shadow: 0 0 0 1px #163772 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
-    0 0 0 0 #333797, 0 0 0 1px rgba(0, 0, 0, 0.4),
-    0 0px 8px 1px rgba(0, 0, 0, 0.5);
+  0 0 0 0 #333797, 0 0 0 1px rgba(0, 0, 0, 0.4),
+  0 0px 8px 1px rgba(0, 0, 0, 0.5);
 }
 
 .btn-big:hover {
@@ -118,8 +173,8 @@ img {
   position: relative;
   top: -1px;
   box-shadow: 0 0 0 1px #163772 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
-    0 5px 0 0 #333797, 0 5px 0 1px rgba(0, 0, 0, 0.4),
-    0 5px 8px 1px rgba(0, 0, 0, 0.5);
+  0 5px 0 0 #333797, 0 5px 0 1px rgba(0, 0, 0, 0.4),
+  0 5px 8px 1px rgba(0, 0, 0, 0.5);
 }
 
 .background {
@@ -127,4 +182,27 @@ img {
   border: double 1px;
   width: 5em;
   height: 5em;
+}
+
+@media all and (max-width: 800px) {
+  a {
+    font-size: 1rem;
+  }
+  
+  #title {
+    font-size: 1.8rem;
+  }
+  
+  #name {
+    font-size: 1.2rem;
+  }
+
+  #instructions {
+    font-size: 1rem;
+  }
+
+  #ingredients {
+    font-size: 1rem;
+  }
+
 }
