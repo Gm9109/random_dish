@@ -13,6 +13,10 @@ body {
   /* justify-content: center; */
 }
 
+em {
+  font-weight: bold;
+}
+
 .grid {
   display: flex;
   justify-content: space-evenly;
@@ -61,7 +65,10 @@ body {
 
 #nation {
   text-align: center;
+  font-weight: bold;
   font-size: 1.2rem;
+  background: radial-gradient(rgb(34, 34, 34), rgb(0, 0, 0));
+  text-shadow: yellow 1px 1px 5px;
   /* border-left: ridge 20px black; */
 }
 
@@ -69,7 +76,8 @@ body {
   width: 100%;
   border: ridge 10px rgb(147, 49, 65);
   font-size: 2.5rem;
-  background: linear-gradient(to left, rgb(179, 42, 42), red);
+  text-align: center;
+  /* background: linear-gradient(to left, rgb(179, 42, 42), red); */
 }
 
 #instructions {
@@ -78,6 +86,7 @@ body {
   word-spacing: 4px;
   border: ridge 10px rgb(147, 49, 65);
   text-align: center;
+  text-shadow: black 1px 1px 1px;
 }
 
 p {
@@ -101,6 +110,9 @@ a {
 .videoPlayer {
   display: flex;
   justify-content: center;
+  background-image: url(checkered_icon-icons.com_54040.png);
+  object-fit: cover;
+  background-color: white;
 }
 
 iframe {
@@ -199,6 +211,8 @@ img {
 
   #instructions {
     font-size: 1rem;
+    max-height: 20vh;
+    overflow: auto;
   }
 
   #ingredients {

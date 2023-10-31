@@ -93,6 +93,9 @@ request().then((data) => randDish(data));
 
 groBtn.addEventListener("click", () => {
   grid.innerHTML = "";
+  grid2.innerHTML = "";
+  grid3.innerHTML = "";
+  videoPlayer.innerHTML = "";
   request().then((data) => {
     randDish(data);
   });
